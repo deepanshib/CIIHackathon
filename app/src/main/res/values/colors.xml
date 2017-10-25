@@ -2,11 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#000000</color>
     <color name="opt1">#1285d1</color>
     <color name="opt2">#1b4b29</color>
-
     <color name="opt3">#cf5c15</color>
+    <color name="nav1">#3da1c5</color>
+    <color name="nav2">#a4b039</color>
+    <color name="nav3">#c53d66</color>
+    <color name="nav4">#1c1c1a</color>
 
 
 </resources>
