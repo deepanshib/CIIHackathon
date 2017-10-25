@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Foodathon</string>
+    <string name="menu_option1">Add Food</string>
+    <string name="menu_option2">Add Exercise</string>
+    <string name="menu_option3">Add Drink</string>
+
+    <string name="opt1_detail">Eaten something?Add it to your diet and keep track of your calories</string>
+    <string name="opt2_detail">Eaten extra!! Come on .. burn your calories ..check out some exercises</string>
+    <string name="opt3_detail">Drunk water,milk, juice,cocktail or mocktail? Add it here</string>
+
+</resources>
