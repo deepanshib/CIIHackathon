@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class Male_female extends AppCompatActivity {
     private ImageView male, female;
-
+    public static boolean  gender = true;
 
 
     @Override
@@ -21,13 +21,19 @@ public class Male_female extends AppCompatActivity {
         male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+              gender = true;
                 startActivity(new Intent(getApplicationContext(),User_info.class));
+
             }
         });
         female.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+              gender = false;
                 startActivity(new Intent(getApplicationContext(),User_info.class));
+
             }
         });
 
