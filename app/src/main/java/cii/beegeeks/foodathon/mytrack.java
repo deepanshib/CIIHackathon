@@ -39,7 +39,7 @@ public class mytrack extends Fragment {
                     @Override
                     public void onBoomButtonClick(int index) {
 
-                        getChildFragmentManager().beginTransaction().replace(R.id.home, new breakfast1()).commit();
+                        getChildFragmentManager().beginTransaction().replace(R.id.mytrack, new breakfast1()).commit();
                     }
                 });
         bmb.addBuilder(builder1);
@@ -50,7 +50,7 @@ public class mytrack extends Fragment {
                     @Override
                     public void onBoomButtonClick(int index) {
 
-                        getChildFragmentManager().beginTransaction().replace(R.id.home, new lunch1()).commit();
+                        getChildFragmentManager().beginTransaction().replace(R.id.mytrack, new lunch1()).commit();
                     }
                 });
         bmb.addBuilder(builder4);
@@ -61,7 +61,7 @@ public class mytrack extends Fragment {
                     @Override
                     public void onBoomButtonClick(int index) {
 
-                        getChildFragmentManager().beginTransaction().replace(R.id.home, new dinner1()).commit();
+                        getChildFragmentManager().beginTransaction().replace(R.id.mytrack, new dinner1()).commit();
                     }
                 });
         bmb.addBuilder(builder5);
@@ -72,7 +72,7 @@ public class mytrack extends Fragment {
                     @Override
                     public void onBoomButtonClick(int index) {
 
-                        getChildFragmentManager().beginTransaction().replace(R.id.home, new snacks1()).commit();
+                        getChildFragmentManager().beginTransaction().replace(R.id.mytrack, new snacks1()).commit();
                     }
                 });
         bmb.addBuilder(builder3);
@@ -83,7 +83,7 @@ public class mytrack extends Fragment {
                     @Override
                     public void onBoomButtonClick(int index) {
 
-                        getChildFragmentManager().beginTransaction().replace(R.id.home, new excercise1()).commit();
+                        getChildFragmentManager().beginTransaction().replace(R.id.mytrack, new excercise1()).commit();
                     }
                 });
         bmb.addBuilder(builder2);

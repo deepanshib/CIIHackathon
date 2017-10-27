@@ -23,6 +23,8 @@ BoomMenuButton bmb;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        mytrack m1=new mytrack();
+        getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit();
         //Floating bButoon code
         bmb = (BoomMenuButton) findViewById(R.id.bmb);
 
@@ -53,7 +55,7 @@ BoomMenuButton bmb;
         };
 
 
-        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+        /*bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
                 .normalImageRes(R.drawable.salad)
                 .normalTextRes(R.string.menu_option1)
@@ -109,7 +111,7 @@ BoomMenuButton bmb;
                     }
                 });
         bmb.addBuilder(builder2);
-
+*/
         //Bottom navigation code
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
@@ -122,12 +124,12 @@ BoomMenuButton bmb;
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
-                mytrack m1=new mytrack();
-                getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit();
+
                 switch(position)
                 {
                     case 0:
                     {
+                        mytrack m1=new mytrack();
                         getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit(); break;
                     }
                     case 1:
@@ -140,7 +142,7 @@ BoomMenuButton bmb;
                         Health m3=new Health();
                         getSupportFragmentManager().beginTransaction().replace(R.id.home,m3).commit(); break;
                     }
-                    case 4:
+                    case 3:
                     {
                         Profile m4=new Profile();
                         getSupportFragmentManager().beginTransaction().replace(R.id.home,m4).commit(); break;
