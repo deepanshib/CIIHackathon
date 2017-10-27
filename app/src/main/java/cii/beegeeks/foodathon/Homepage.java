@@ -1,5 +1,6 @@
 package cii.beegeeks.foodathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,7 @@ BoomMenuButton bmb;
         };
 
 
-        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+      /*  bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
                 .normalImageRes(R.drawable.salad)
                 .normalTextRes(R.string.menu_option1)
@@ -112,7 +113,7 @@ BoomMenuButton bmb;
                     }
                 });
         bmb.addBuilder(builder2);
-        //Bottom navigation code
+        //Bottom navigation code*/
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
         bottomNavigationBar

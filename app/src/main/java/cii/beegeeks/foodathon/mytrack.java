@@ -2,6 +2,7 @@ package cii.beegeeks.foodathon;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,21 @@ public class mytrack extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          View view=inflater.inflate(R.layout.fragment_mytrack, container, false);
+      /*  CardView cardView_breakfast=(CardView)view.findViewById(R.id.cardView_breakfast);
+        CardView cardView_lunch=(CardView)view.findViewById(R.id.cardView_lunch);
+        C*/
+
+
+
+
+
+
+
+
+
+
+
+
         BoomMenuButton bmb;
         bmb = (BoomMenuButton) view.findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
