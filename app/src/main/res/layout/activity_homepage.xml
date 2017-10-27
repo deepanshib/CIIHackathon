@@ -10,7 +10,6 @@
         android:id="@+id/myRecycler"
         android:layout_centerHorizontal="true"
         android:layout_height="match_parent">
-
     </android.support.v7.widget.RecyclerView>
     <com.nightonke.boommenu.BoomMenuButton
         android:id="@+id/bmb"

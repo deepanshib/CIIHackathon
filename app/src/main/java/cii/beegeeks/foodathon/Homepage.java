@@ -1,11 +1,15 @@
 package cii.beegeeks.foodathon;
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.HeaderViewListAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -79,7 +83,6 @@ BoomMenuButton bmb;
             @Override
             public void onBindViewHolderImpl(RecyclerView.ViewHolder viewHolder, ParallaxRecyclerAdapter parallaxRecyclerAdapter, int i) {
                 ((TextView) viewHolder.itemView).setText(content.get(i));
-
             }
 
             @Override
@@ -104,7 +107,7 @@ BoomMenuButton bmb;
             }
 
             // Event triggered when you click on a item of the adapter.
-            void onClick(View v, int position) {
+           public void onClick(View v, int position) {
 
             }
         });
