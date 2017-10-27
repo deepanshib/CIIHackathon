@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cii.beegeeks.foodathon.User_info">
+
+
+    <ImageView
+        android:id="@+id/yourbasics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/signup_heading"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Let's start with your basics."
+        android:textSize="20dp"
+        android:layout_below="@+id/yourbasics"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:id="@+id/imageView3"
+        android:layout_marginStart="30dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonfemale"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="35dp"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/age"
+        android:id="@+id/imageView5"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginTop="40dp"
+        android:layout_alignEnd="@+id/imageView4" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/height"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/imageView5"
+        android:layout_alignEnd="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:id="@+id/imageView7" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/weight"
+        android:id="@+id/imageView6"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_alignEnd="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/info_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/button_normal" />
+
+    <EditText
+        android:id="@+id/age_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@android:color/transparent"/>
+    <EditText
+        android:id="@+id/height_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@android:color/transparent"
+        android:layout_alignBottom="@+id/imageView7"
+        android:layout_alignStart="@+id/age_field"
+        android:layout_marginBottom="11dp" />
+    <EditText
+        android:id="@+id/weight_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@android:color/transparent"
+        android:layout_alignBottom="@+id/imageView6"
+        android:layout_alignStart="@+id/height_field"
+        android:layout_marginBottom="11dp" />
+
+
+</RelativeLayout>
