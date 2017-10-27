@@ -9,7 +9,8 @@ import android.widget.ImageView;
 
 public class Male_female extends AppCompatActivity {
     private ImageView male, female;
-    
+
+
 
 
     @Override
