@@ -1,19 +1,59 @@
 package cii.beegeeks.foodathon;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-
+import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.nightonke.boommenu.BoomButtons.HamButton;
+import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
+import com.nightonke.boommenu.BoomMenuButton;
 public class Homepage extends AppCompatActivity {
-/*BoomMenuButton bmb;*/
+BoomMenuButton bmb;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+    private String username="",userid="";
+    private int RC_SIGN_IN=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         //Floating bButoon code
-        /*bmb = (BoomMenuButton) findViewById(R.id.bmb);
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    username = user.getDisplayName();
+                    userid = user.getEmail();
+
+                    Toast.makeText(getApplicationContext(), "You're now signed in. Welcome.", Toast.LENGTH_SHORT).show();
+                } else {
+                    // User is signed out
+                    startActivityForResult(
+                            AuthUI.getInstance()
+                                    .createSignInIntentBuilder()
+                                    .setIsSmartLockEnabled(false)
+                                    .setProviders(
+                                            AuthUI.EMAIL_PROVIDER,
+                                            AuthUI.GOOGLE_PROVIDER)
+                                    .build(),
+                            RC_SIGN_IN);
+                }
+            }
+        };
+
+
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
                 .normalImageRes(R.drawable.salad)
                 .normalTextRes(R.string.menu_option1)
@@ -47,10 +87,6 @@ public class Homepage extends AppCompatActivity {
                     }
                 });
         bmb.addBuilder(builder5);
-                    .normalImageRes(R.drawable.salad)
-                .normalTextRes(R.string.menu_option1)
-                .subNormalTextRes(R.string.opt1_detail).normalColorRes(R.color.opt1);
-        bmb.addBuilder(builder1);
         HamButton.Builder builder3 = new HamButton.Builder()
                 .normalImageRes(R.drawable.cocktail)
                 .normalTextRes(R.string.menu_option3)
@@ -73,7 +109,7 @@ public class Homepage extends AppCompatActivity {
                     }
                 });
         bmb.addBuilder(builder2);
-*/
+
         //Bottom navigation code
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
@@ -86,27 +122,28 @@ public class Homepage extends AppCompatActivity {
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
-                mytrack m1 = new mytrack();
-                getSupportFragmentManager().beginTransaction().replace(R.id.home, m1).commit();
-                switch (position) {
-                    case 0: {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m1).commit();
-                        break;
+                mytrack m1=new mytrack();
+                getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit();
+                switch(position)
+                {
+                    case 0:
+                    {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit(); break;
                     }
-                    case 1: {
-                        Alternative m2 = new Alternative();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m2).commit();
-                        break;
+                    case 1:
+                    {
+                        Alternative m2=new Alternative();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m2).commit(); break;
                     }
-                    case 2: {
-                        Health m3 = new Health();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m3).commit();
-                        break;
+                    case 2:
+                    {
+                        Health m3=new Health();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m3).commit(); break;
                     }
-                    case 4: {
-                        Profile m4 = new Profile();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m4).commit();
-                        break;
+                    case 4:
+                    {
+                        Profile m4=new Profile();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m4).commit(); break;
                     }
 
                 }
@@ -114,11 +151,13 @@ public class Homepage extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(int position) {
+
             }
 
             @Override
             public void onTabReselected(int position) {
             }
         });
+
     }
 }

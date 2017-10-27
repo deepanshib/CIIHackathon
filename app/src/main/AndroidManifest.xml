@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Male_female" />
+        <activity android:name=".User_info"></activity>
     </application>
 
 </manifest>
