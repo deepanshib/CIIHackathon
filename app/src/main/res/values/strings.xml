@@ -11,4 +11,7 @@
     <string name="opt2_detail">Eaten extra!! Come on .. burn your calories ..check out some exercises</string>
     <string name="opt3_detail">Had snacks or Drunk water,milk, juice,cocktail or mocktail? Add it here</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
