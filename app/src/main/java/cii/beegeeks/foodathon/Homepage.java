@@ -55,7 +55,7 @@ BoomMenuButton bmb;
         };
 
 
-        /*bmb = (BoomMenuButton) findViewById(R.id.bmb);
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
                 .normalImageRes(R.drawable.salad)
                 .normalTextRes(R.string.menu_option1)
@@ -89,6 +89,7 @@ BoomMenuButton bmb;
                     }
                 });
         bmb.addBuilder(builder5);
+
         HamButton.Builder builder3 = new HamButton.Builder()
                 .normalImageRes(R.drawable.cocktail)
                 .normalTextRes(R.string.menu_option3)
@@ -111,7 +112,6 @@ BoomMenuButton bmb;
                     }
                 });
         bmb.addBuilder(builder2);
-*/
         //Bottom navigation code
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
@@ -132,15 +132,15 @@ BoomMenuButton bmb;
                         mytrack m1=new mytrack();
                         getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit(); break;
                     }
-                    case 1:
-                    {
-                        Alternative m2=new Alternative();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m2).commit(); break;
+                    case 1: {
+                        Alternative m2 = new Alternative();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m2).commit();
+                        break;
                     }
-                    case 2:
-                    {
-                        Health m3=new Health();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m3).commit(); break;
+                    case 2: {
+                        Health m3 = new Health();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m3).commit();
+                        break;
                     }
                     case 3:
                     {
@@ -160,6 +160,34 @@ BoomMenuButton bmb;
             public void onTabReselected(int position) {
             }
         });
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RC_SIGN_IN) {
+            if (resultCode == RESULT_OK) {
+                // Sign-in succeeded, set up the UI
+                startActivity(new Intent(getApplicationContext(),Male_female.class));
+                Toast.makeText(this, "Signed in!", Toast.LENGTH_SHORT).show();
+            } else if (resultCode == RESULT_CANCELED) {
+                // Sign in was canceled by the user, finish the activity
+                Toast.makeText(this, "Sign in canceled", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mAuthStateListener != null) {
+            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+        }
     }
 }
