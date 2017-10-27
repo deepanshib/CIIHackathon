@@ -28,12 +28,22 @@ BoomMenuButton bmb;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         //Floating bButoon code
-        bmb=(BoomMenuButton)findViewById(R.id.bmb);
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
-                    .normalImageRes(R.drawable.salad)
-                    .normalTextRes(R.string.menu_option1)
-                    .subNormalTextRes(R.string.opt1_detail).normalColorRes(R.color.opt1);
-            bmb.addBuilder(builder1);
+                .normalImageRes(R.drawable.salad)
+                .normalTextRes(R.string.menu_option1)
+                .subNormalTextRes(R.string.opt1_detail).normalColorRes(R.color.opt1);
+        bmb.addBuilder(builder1);
+        HamButton.Builder builder4 = new HamButton.Builder()
+                .normalImageRes(R.drawable.salad)
+                .normalTextRes(R.string.menu_option4)
+                .subNormalTextRes(R.string.opt4_detail).normalColorRes(R.color.opt4);
+        bmb.addBuilder(builder4);
+        HamButton.Builder builder5 = new HamButton.Builder()
+                .normalImageRes(R.drawable.salad)
+                .normalTextRes(R.string.menu_option5)
+                .subNormalTextRes(R.string.opt5_detail).normalColorRes(R.color.opt5);
+        bmb.addBuilder(builder5);
         HamButton.Builder builder3 = new HamButton.Builder()
                 .normalImageRes(R.drawable.cocktail)
                 .normalTextRes(R.string.menu_option3)
@@ -54,75 +64,22 @@ BoomMenuButton bmb;
                 .addItem(new BottomNavigationItem(R.drawable.healthissues, "Health Issues").setActiveColorResource(R.color.nav3))
                 .addItem(new BottomNavigationItem(R.drawable.users, "My Profile").setActiveColorResource(R.color.nav4))
                 .initialise();
-        bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
+        bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
             }
+
             @Override
             public void onTabUnselected(int position) {
             }
+
             @Override
             public void onTabReselected(int position) {
             }
         });
 
-        //Header
-        RecyclerView myRecycler = (RecyclerView) findViewById(R.id.myRecycler);
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        manager.setOrientation(LinearLayoutManager.VERTICAL);
-        myRecycler.setLayoutManager(manager);
-        myRecycler.setHasFixedSize(true);
-
-        final List<String> content = new ArrayList<>();
-        for (int i = 0; i < 30; i++)
-            content.add(getListString(i));
 
 
-        ParallaxRecyclerAdapter<String> stringAdapter = new ParallaxRecyclerAdapter<String>(content) {
-
-            @Override
-            public void onBindViewHolderImpl(RecyclerView.ViewHolder viewHolder, ParallaxRecyclerAdapter parallaxRecyclerAdapter, int i) {
-                ((TextView) viewHolder.itemView).setText(content.get(i));
-            }
-
-            @Override
-            public RecyclerView.ViewHolder onCreateViewHolderImpl(ViewGroup viewGroup, ParallaxRecyclerAdapter parallaxRecyclerAdapter, int i) {
-                return new SimpleViewHolder(getLayoutInflater().inflate(android.R.layout.simple_list_item_1, viewGroup, false));
-            }
-
-            @Override
-            public int getItemCountImpl(ParallaxRecyclerAdapter parallaxRecyclerAdapter) {
-                return content.size();
-            }
-        };
-
-
-        stringAdapter.setParallaxHeader(getLayoutInflater().inflate(R.layout.my_header, myRecycler, false), myRecycler);
-        stringAdapter.setOnParallaxScroll(new ParallaxRecyclerAdapter.OnParallaxScroll() {
-            @Override
-            public void onParallaxScroll(float percentage, float offset, View parallax) {
-//                Drawable c = mToolbar.getBackground();
-//                c.setAlpha(Math.round(percentage * 255));
-//                mToolbar.setBackground(c);
-            }
-
-            // Event triggered when you click on a item of the adapter.
-           public void onClick(View v, int position) {
-
-            }
-        });
-        myRecycler.setAdapter(stringAdapter);
     }
-    static class SimpleViewHolder extends RecyclerView.ViewHolder {
-
-        public SimpleViewHolder(View itemView) {
-            super(itemView);
-        }
-    }
-
-    public String getListString(int position) {
-        return position + " - android";
-    }
-
 
 }
