@@ -1,20 +1,6 @@
 package cii.beegeeks.foodathon;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.HeaderViewListAdapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
@@ -138,27 +124,28 @@ BoomMenuButton bmb;
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
-                mytrack m1 = new mytrack();
-                getSupportFragmentManager().beginTransaction().replace(R.id.home, m1).commit();
-                switch (position) {
-                    case 0: {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m1).commit();
-                        break;
+                mytrack m1=new mytrack();
+                getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit();
+                switch(position)
+                {
+                    case 0:
+                    {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m1).commit(); break;
                     }
-                    case 1: {
-                        Alternative m2 = new Alternative();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m2).commit();
-                        break;
+                    case 1:
+                    {
+                        Alternative m2=new Alternative();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m2).commit(); break;
                     }
-                    case 2: {
-                        Health m3 = new Health();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m3).commit();
-                        break;
+                    case 2:
+                    {
+                        Health m3=new Health();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m3).commit(); break;
                     }
-                    case 4: {
-                        Profile m4 = new Profile();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, m4).commit();
-                        break;
+                    case 4:
+                    {
+                        Profile m4=new Profile();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home,m4).commit(); break;
                     }
 
                 }
@@ -166,11 +153,13 @@ BoomMenuButton bmb;
 
             @Override
             public void onTabUnselected(int position) {
+
             }
 
             @Override
             public void onTabReselected(int position) {
             }
         });
+
     }
 }

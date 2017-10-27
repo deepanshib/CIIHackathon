@@ -1,124 +1,390 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/home"
+    tools:context="cii.beegeeks.foodathon.Homepage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context="cii.beegeeks.foodathon.Homepage">
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    android:layout_height="wrap_content">
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-
-        android:background="@drawable/arc"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       >
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="40dp"
-            android:text="Today"
-            android:textColor="#fff"
-            android:textSize="50dp" />
+            android:background="#f4eaea"
+            android:orientation="vertical">
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4eaea"
+                tools:context="cii.beegeeks.foodathon.Homepage"
+                android:id="@+id/relativeLayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="vertical"
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="90dp"
-            android:src="@drawable/circle" />
+                    android:background="@drawable/arc"
+                    android:id="@+id/linearLayout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="40dp"
+                        android:text="Today"
+                        android:textColor="#fff"
+                        android:layout_gravity="center"
+                        android:textSize="50dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/circle"
+                        android:layout_height="90dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calorie Intake"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
+                            android:padding="10dp"
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expected Calorie intake"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                            android:padding="10dp"
 
-            <TextView
-                android:layout_width="wrap_content"
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calories Burn"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
+
+                            android:padding="10dp"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1450"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
+                            android:padding="10dp"
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2000"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
+
+                            android:padding="10dp"
+
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="340"
+                            android:layout_weight="1"
+                            android:textColor="#fff"
+
+                            android:padding="10dp"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="Calorie Intake"
-                android:textColor="#fff"
-                android:textSize="15dp" />
+                android:layout_below="@+id/relativeLayout"
+                android:paddingBottom="90dp"
+                android:layout_alignParentStart="true">
+                <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
 
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="Expected Calorie intake"
+                app:cardBackgroundColor="#b9becb"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardView_breakfast">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="BREAKFAST"
+                        android:textSize="35sp"
+                        android:background="#ffffff"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingTop="5dp"
 
-                android:textColor="#fff"
+                        android:src="@drawable/toaster"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_breakfast"
+                        android:text="RECOMMENDED 921-1237 KCAL"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <ListView
+                            android:id="@+id/list_breakfast"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></ListView>
+                    </LinearLayout>
 
-                android:textSize="15dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
 
-            <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="Calories Burn"
+                app:cardBackgroundColor="#b9becb"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardView_lunch">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-                android:textColor="#fff"
-                android:textSize="15dp" />
-        </LinearLayout>
+                        android:text="LUNCH"
+                        android:textColor="#000"
+                        android:textSize="35sp"
+                        android:background="#ffffff"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingTop="5dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                        android:src="@drawable/serve"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_lunch"
+                        android:text="RECOMMENDED 921-1237 KCAL"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <ListView
+                            android:id="@+id/list_lunch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></ListView>
+                    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="1450"
-                android:textColor="#fff"
-                android:textSize="15dp" />
+                app:cardBackgroundColor="#b9becb"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardView_dinner">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-            <TextView
-                android:layout_width="wrap_content"
+                        android:text="DINNER"
+                        android:textColor="#000"
+                        android:textSize="35sp"                        android:background="#ffffff"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingTop="5dp"
+
+                        android:src="@drawable/kitchenpack"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_dinner"
+                        android:text="RECOMMENDED 0-316 KCAL"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <ListView
+                            android:id="@+id/list_dinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></ListView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="2000"
+                app:cardBackgroundColor="#b9becb"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardView_snacks">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-                android:textColor="#fff"
+                        android:text="SNACKS And DRINKS"
+                        android:textColor="#000"
+                        android:textSize="30sp"                        android:background="#ffffff"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/teacup"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_Snacks"
+                        android:text="RECOMMENDED 921-1237 KCAL"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <ListView
+                            android:id="@+id/list_snacks"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></ListView>
+                    </LinearLayout>
 
-                android:textSize="15dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
 
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="340"
+                app:cardBackgroundColor="#b9becb"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardView_exercise">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
-                android:textColor="#fff"
-                android:textSize="15dp" />
-        </LinearLayout>
-    </LinearLayout>
+                        android:text="EXERCISE"
+                        android:textColor="#000"
+                        android:textSize="35sp"                        android:background="#ffffff"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingTop="5dp"
 
+                        android:src="@drawable/exercise"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        >
+                        <ListView
+                            android:id="@+id/list_exercise"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></ListView>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
     <com.nightonke.boommenu.BoomMenuButton
         android:id="@+id/bmb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottomBar"
-        android:layout_alignParentEnd="true"
         app:bmb_buttonEnum="ham"
+        app:bmb_piecePlaceEnum="piecePlace_ham_5"
         app:bmb_buttonPlaceEnum="buttonPlace_ham_5"
-        app:bmb_piecePlaceEnum="piecePlace_ham_5" />
-
+        android:layout_above="@+id/bottomBar"
+        android:layout_alignParentEnd="true" />
     <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:layout_gravity="bottom"
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
-
-
-
