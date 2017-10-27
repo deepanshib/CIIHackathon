@@ -11,6 +11,7 @@ public class Male_female extends AppCompatActivity {
     private ImageView male, female;
     
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
