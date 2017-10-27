@@ -2,30 +2,18 @@ package cii.beegeeks.foodathon;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.HeaderViewListAdapter;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.nightonke.boommenu.BoomButtons.HamButton;
-import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
-import com.nightonke.boommenu.BoomMenuButton;
 
 public class Homepage extends AppCompatActivity {
-BoomMenuButton bmb;
+/*BoomMenuButton bmb;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         //Floating bButoon code
-        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+        /*bmb = (BoomMenuButton) findViewById(R.id.bmb);
         HamButton.Builder builder1 = new HamButton.Builder()
                 .normalImageRes(R.drawable.salad)
                 .normalTextRes(R.string.menu_option1)
@@ -85,7 +73,7 @@ BoomMenuButton bmb;
                     }
                 });
         bmb.addBuilder(builder2);
-
+*/
         //Bottom navigation code
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
