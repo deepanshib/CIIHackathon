@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "278933912277",
+    "firebase_url": "https://ciihackathon-432c9.firebaseio.com",
+    "project_id": "ciihackathon-432c9",
+    "storage_bucket": "ciihackathon-432c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278933912277:android:eae7586ba1cdebb7",
+        "android_client_info": {
+          "package_name": "cii.beegeeks.foodathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278933912277-n8kho4hn8155k0rorgd22kd03i7atjm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cii.beegeeks.foodathon",
+            "certificate_hash": "a10a56a7bc1f1e916061629c846d08a01665f798"
+          }
+        },
+        {
+          "client_id": "278933912277-05as4754ts63o5jqj43iut2f3pc1qadc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADiabD1zKZQxkRiu50qg10ITW8jrScC3U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278933912277-05as4754ts63o5jqj43iut2f3pc1qadc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
