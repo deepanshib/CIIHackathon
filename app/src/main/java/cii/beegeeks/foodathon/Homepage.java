@@ -1,7 +1,9 @@
 package cii.beegeeks.foodathon;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -9,12 +11,8 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.nightonke.boommenu.BoomButtons.HamButton;
+import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomMenuButton;
-import com.poliveira.parallaxrecyclerview.ParallaxRecyclerAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Homepage extends AppCompatActivity {
 BoomMenuButton bmb;
     private FirebaseAuth mFirebaseAuth;
