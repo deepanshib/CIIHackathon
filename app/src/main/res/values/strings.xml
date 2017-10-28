@@ -13,5 +13,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="action_search">Search</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_voice">Voice</string>
+    <string name="shadow_description">Drop Shadow</string>
+    <string name="load_more">Load More</string>
 </resources>

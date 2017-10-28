@@ -56,64 +56,6 @@ BoomMenuButton bmb;
         };
 
 
-      /*  bmb = (BoomMenuButton) findViewById(R.id.bmb);
-        HamButton.Builder builder1 = new HamButton.Builder()
-                .normalImageRes(R.drawable.salad)
-                .normalTextRes(R.string.menu_option1)
-                .subNormalTextRes(R.string.opt1_detail).normalColorRes(R.color.opt1).listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, new breakfast1()).commit();
-                    }
-                });
-        bmb.addBuilder(builder1);
-        HamButton.Builder builder4 = new HamButton.Builder()
-                .normalImageRes(R.drawable.salad)
-                .normalTextRes(R.string.menu_option4)
-                .subNormalTextRes(R.string.opt4_detail).normalColorRes(R.color.opt4).listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, new lunch1()).commit();
-                    }
-                });
-        bmb.addBuilder(builder4);
-        HamButton.Builder builder5 = new HamButton.Builder()
-                .normalImageRes(R.drawable.salad)
-                .normalTextRes(R.string.menu_option5)
-                .subNormalTextRes(R.string.opt5_detail).normalColorRes(R.color.opt5).listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, new dinner1()).commit();
-                    }
-                });
-        bmb.addBuilder(builder5);
-
-        HamButton.Builder builder3 = new HamButton.Builder()
-                .normalImageRes(R.drawable.cocktail)
-                .normalTextRes(R.string.menu_option3)
-                .subNormalTextRes(R.string.opt3_detail).normalColorRes(R.color.opt2).listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, new snacks1()).commit();
-                    }
-                });
-        bmb.addBuilder(builder3);
-        HamButton.Builder builder2 = new HamButton.Builder()
-                .normalImageRes(R.drawable.run)
-                .normalTextRes(R.string.menu_option2)
-                .subNormalTextRes(R.string.opt2_detail).normalColorRes(R.color.opt3).listener(new OnBMClickListener() {
-                    @Override
-                    public void onBoomButtonClick(int index) {
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home, new excercise1()).commit();
-                    }
-                });
-        bmb.addBuilder(builder2);
-        //Bottom navigation code*/
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottomBar);
         bottomNavigationBar

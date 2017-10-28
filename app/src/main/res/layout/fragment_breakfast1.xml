@@ -87,24 +87,100 @@
         android:id="@+id/imageView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/imageView2"
         android:layout_marginEnd="26dp"
-        app:srcCompat="@drawable/voice" />
+        app:srcCompat="@drawable/voice"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView11"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="14dp"
         android:layout_toEndOf="@+id/back_breakfast"
         android:background="@android:color/transparent"
         android:ems="10"
+        android:hint="Search"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
-        android:text="Search"
         android:textColor="#ffffff"
         android:textSize="20sp" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/female_btn"
+        android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/bottom_shadow"
+        android:contentDescription="@string/shadow_description"
+        android:id="@+id/imageView" />
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/relativeLayout"-->
+        <!--android:layout_marginTop="46dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/imageView"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar_search"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_height="56dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:theme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:background="#bdbdbd">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/etSearch"-->
+                <!--android:imeOptions="actionSearch"-->
+                <!--android:inputType="textCapWords"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:textColor="@color/text_color"-->
+                <!--android:hint="@string/action_search"-->
+                <!--android:textColorHint="@color/grey_transparent"-->
+                <!--android:background="@android:color/transparent"/>-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar_top"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+            <!--android:minHeight="56dp"-->
+            <!--android:background="@color/authui_colorPrimary">-->
+            <!--&lt;!&ndash;  Just testing to see how the switch would look in the toolbar-->
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"/> &ndash;&gt;-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+        <ImageView
+            android:layout_below="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/bottom_shadow"
+            android:contentDescription="@string/shadow_description"/>
+
+        <ProgressBar
+            android:layout_below="@+id/toolbar_top"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_progressbar"
+            android:layout_marginTop="-7dp"
+            android:indeterminateOnly="true"
+            android:visibility="invisible"
+            android:id="@+id/searchProgress"/>
+    </RelativeLayout>
+
+<!--</RelativeLayout>-->
